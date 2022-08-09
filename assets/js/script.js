@@ -11,6 +11,27 @@
 // THEN I can save my initials and my score
 var startButton = document.querySelector(".start-button");
 
+questionOne = ["","","",""];
+questionTwo = ["","","",""];
+questionThree = ["","","",""];
+questionFour = ["","","",""];
+questionFive = ["","","",""];
+questionSix = ["","","",""];
+questionSeven = ["","","",""];
+questionEight = ["","","",""];
+questionNine = ["","","",""];
+questionTen = ["","","",""];
+
+questionOneAnswer = "";
+questionTwoAnswer = "";
+questionThreeAnswer = "";
+questionFourAnswer = "";
+questionFiveAnswer = "";
+questionSixAnswer = "";
+questionSevenAnswer = "";
+questionEightAnswer = "";
+questionNineAnswer = "";
+questionTenAnswer = "";
 
 function runTimer(){
     console.log("timer started");{
@@ -41,5 +62,9 @@ function runTimer(){
       }
 }
 
+function startGame() {
+    runTimer();
 
+    
+}
 startButton.addEventListener("click", startGame);
