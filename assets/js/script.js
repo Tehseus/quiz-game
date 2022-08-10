@@ -13,46 +13,13 @@ var questionContainerElement = document.getElementById('questionContainer')
 var questionElement = document.getElementById('question')
 var answerButtonsElement = document.getElementById('answerContainer')
 var questionContainerElement = document.getElementById("questionContainer")
-var answer1 = ""
-var answer2 = ""
-var answer3 = ""
-var answer4 = ""
+var answer1 = document.getElementById("answer1").innerText
+var answer2 = document.getElementById("answer2").innerText
+var answer3 = document.getElementById("answer3").innerText
+var answer4 = document.getElementById("answer4").innerText
 var userSelection = ""
 var startingScore = 0
 var score = 0
-
-let randomQuestions = undefined;
-let currentQuestionIndex =undefined;
-//function that starts the game and calls the timer function
-//also unhides the questions
-function startGame() {
-    runTimer();
-    questionContainerElement.classList.remove("hide")
-    randomQuestions = questions.sort(()=> Math.random()- .5)
-    currentQuestionIndex = 0
-    setNextQuestion();
-    selectedAnswer();
-    
-}
-
-
-//function to set the next question
-function setNextQuestion() {
-    showQuestion(randomQuestions[currentQuestionIndex])
-}
-//function to pull questions
-function showQuestion(questions) {
-    questionElement.innerText = questions.question
-}
-function selectedAnswer() {
-    answerButtonsElement[currentQuestionIndex].innerText = document.getElementById("answerContainer").child[currentQuestionIndex];
-    console.log(answerButtonsElement[currentQuestionIndex].innerText);
-
-    
-}
-
-//question arrays holding my questions/answers
-//swapped to using const instead of 10 different arrays for questions/answers
 const questions = [
     {
         question: 'How many teams are in the NHL?',
@@ -148,7 +115,45 @@ const questions = [
 
 ]
 
+let randomQuestions = undefined;
+let currentQuestionIndex =undefined;
+//function that starts the game and calls the timer function
+//also unhides the questions
+function startGame() {
+    runTimer();
+    questionContainerElement.classList.remove("hide")
+    randomQuestions = questions.sort(()=> Math.random()- .5)
+    currentQuestionIndex = 0
+    setNextQuestion();
+    selectedAnswer();
+    
+}
 
+
+//function to set the next question
+function setNextQuestion() {
+    showQuestion(randomQuestions[currentQuestionIndex])
+}
+//function to pull questions
+function showQuestion(questions) {
+    questionElement.innerText = questions.question
+}
+function selectedAnswer() {
+    document.getElementById("answer4").innerText = "poop"
+    console.log(answer4);
+
+    
+}
+console.log(answer1);
+console.log(answer2);
+console.log(answer3);
+console.log(answer4);
+
+//question arrays holding my questions/answers
+//swapped to using const instead of 10 different arrays for questions/answers
+
+
+// console.log(questions);
 
 
 
