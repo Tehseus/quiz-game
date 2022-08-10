@@ -11,6 +11,7 @@
 // THEN I can save my initials and my score
 var startButton = document.querySelector(".start-button");
 
+//arrays for questions/answers
 questionOne = ["","","",""];
 questionTwo = ["","","",""];
 questionThree = ["","","",""];
@@ -61,10 +62,70 @@ function runTimer(){
         }, 1000);
       }
 }
-
+var questionContainerElement = document.getElementById("questionContainer")
 function startGame() {
     runTimer();
-
+    questionContainerElement.classList.remove("hide")
+//display questions, loop through them as questions are answered, tally/subtract points/time as needed
     
 }
 startButton.addEventListener("click", startGame);
+var userSelection = ""
+var startingScore = 0
+var score = 0
+
+for (i = 0; i < array.length; i++) {
+    const element = array[i];
+    if (questionOneAnswer===userSelection) {
+        score = startingScore + 10
+    } else {
+        score = startingScore - 10
+    }
+    if (questionTwoAnswer===userSelection) {
+        score = startingScore + 10
+    } else {
+        score = startingScore - 10
+    }
+    if (questionThreeAnswer===userSelection) {
+        score = startingScore + 10
+    } else {
+        score = startingScore - 10
+    }
+    if (questionFourAnswer===userSelection) {
+        score = startingScore + 10
+    } else {
+        score = startingScore - 10
+    }
+    if (questionFiveAnswer===userSelection) {
+        score = startingScore + 10
+    } else {
+        score = startingScore - 10
+    }
+    if (questionSixAnswer===userSelection) {
+        score = startingScore + 10
+    } else {
+        score = startingScore - 10
+    }
+    if (questionSevenAnswer===userSelection) {
+        score = startingScore + 10
+    } else {
+        score = startingScore - 10
+    }
+    if (questionEightAnswer===userSelection) {
+        score = startingScore + 10
+    } else {
+        score = startingScore - 10
+    }
+    if (questionNineAnswer===userSelection) {
+        score = startingScore + 10
+    } else {
+        score = startingScore - 10
+    }
+    if (questionTenAnswer===userSelection) {
+        score = startingScore + 10
+    } else {
+        score = startingScore - 10
+    }
+    
+    
+}
